@@ -21,11 +21,11 @@ abstract class _LanguageStore with Store {
     Language(code: 'US', locale: 'en', language: 'English'),
     Language(code: 'DK', locale: 'da', language: 'Danish'),
     Language(code: 'ES', locale: 'es', language: 'España'),
+    Language(code: 'HI', locale: 'hi', language: 'Hindi'),
   ];
 
   // constructor:---------------------------------------------------------------
-  _LanguageStore(Repository repository)
-      : this._repository = repository {
+  _LanguageStore(Repository repository) : this._repository = repository {
     init();
   }
 
@@ -55,6 +55,8 @@ abstract class _LanguageStore with Store {
       code = "DK";
     } else if (_locale == 'es') {
       code = "ES";
+    } else if (_locale == 'hi') {
+      code = "HI";
     }
 
     return code;
@@ -70,7 +72,7 @@ abstract class _LanguageStore with Store {
   // general:-------------------------------------------------------------------
   void init() async {
     // getting current language from shared preference
-    if(_repository.currentLanguage != null) {
+    if (_repository.currentLanguage != null) {
       _locale = _repository.currentLanguage!;
     }
   }
