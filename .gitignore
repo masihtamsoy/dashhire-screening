@@ -28,6 +28,13 @@
 .pub/
 build/
 
+# Generated Dart files
+**/*.g.dart
+
+
+# Firebase
+google-services.json
+
 # Android related
 **/android/**/gradle-wrapper.jar
 **/android/.gradle
