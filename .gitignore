@@ -28,8 +28,7 @@
 .pub/
 build/
 
-# Generated Dart files
-**/*.g.dart
+
 
 
 # Firebase
